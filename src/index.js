@@ -100,7 +100,8 @@ export default class DeepLink {
     }
 
     if (isAndroid === true) {
-      loadFrame('for-android-deeplink', options.appScheme)
+      window.location.href = options.appScheme
+      // loadFrame('for-android-deeplink', options.appScheme)
     } else {
       redirectTo(options.appScheme)
     }
