@@ -10,23 +10,23 @@ const addEvent = (element, eventName, fn) => {
 }
 
 // Find Frame Function
-const loadFrame = (id, appScheme) => {
-  let iFrame = document.getElementById(id)
-  if (iFrame) {
-    document.body.removeChild(iFrame)
-  }
-  if (appScheme) {
-    iFrame = document.createElement('iframe')
-    iFrame.id = 'for-android-deeplink'
-    iFrame.style.width = 0
-    iFrame.style.height = 0
-    iFrame.style.visibility = 'hidden'
-    iFrame.onLoad = () => {
-      iFrame.src = appScheme
-    }
-    document.body.appendChild(iFrame)
-  }
-}
+// const loadFrame = (id, appScheme) => {
+//   let iFrame = document.getElementById(id)
+//   if (iFrame) {
+//     document.body.removeChild(iFrame)
+//   }
+//   if (appScheme) {
+//     iFrame = document.createElement('iframe')
+//     iFrame.id = 'for-android-deeplink'
+//     iFrame.style.width = 0
+//     iFrame.style.height = 0
+//     iFrame.style.visibility = 'hidden'
+//     iFrame.onLoad = () => {
+//       iFrame.src = appScheme
+//     }
+//     document.body.appendChild(iFrame)
+//   }
+// }
 
 // Redirect Function
 const redirectTo = (url) => {
